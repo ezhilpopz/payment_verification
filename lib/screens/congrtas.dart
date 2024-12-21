@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:payment/screens/payment_verification.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 import '../widget/custombottom_bar.dart';
@@ -23,7 +24,10 @@ class _CongrtasState extends State<Congrtas> {
             colors: [Color(0xffC1272D), Color(0xff95486F), Color(0xff676AB2)]),
         leading: IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => PaymentVerificationScreen()));
             },
             icon: Icon(Icons.arrow_back_ios_new_outlined)),
       ),
@@ -121,7 +125,7 @@ class _CongrtasState extends State<Congrtas> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(6.58))),
                   child: const Text(
-                    'Continue',
+                    'Go to Dashboard',
                     style: TextStyle(
                         fontSize: 13.5,
                         color: Colors.white,
